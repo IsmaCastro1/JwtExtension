@@ -3,13 +3,11 @@
 <head>
   <title>Bearer Token Retriever</title>
   <style>
-
     @keyframes fadeout {
         from { opacity: 1; }
         to   { opacity: 0; }
     }
-
-    #copyToken {
+    #copy {
       background-color: rgb(140,207,253); 
       color: white; 
       border: none; 
@@ -19,25 +17,41 @@
       font-weight: bold; 
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
       transition: transform 0.3s ease; 
+      margin-bottom: 10px;
     }
 
-    #copyToken:active {
-      transform: scale(0.50); /* Escala el botón al hacer clic */
+    #copy:active {
+      transform: scale(0.50); 
+    }
+
+    #textInput{
+      border-radius: 3px; 
+      border: 1px solid #b0b2b6; 
+      background-color: #2a323d;
+      max-width: 95px; 
+      margin-bottom: 10px;
+      color: #b0b2b6;
     }
 
     body{
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: rgb(39,58,82);
+      width: 100px; 
+      height: 50px;
+    }
+
+    #message{
+      margin-bottom: 3px;
     }
 
   </style>
 </head>
-<body style="width: 100px; height: 50px;">
+<body>
   
   <div style="text-align: center;">
-    <button id="copyToken">Obtener Token</button>
+    <input id="textInput" type="text" disabled>
+    <button id="copy">Obtener</button>
     <p id="message" style="font-size: larger; display: none; animation: fadeout 4s;"><b id="text" style="color:rgb(140,207,253);" >COPIADO</b> &#128640;</p>
-    <p></p>
   </div>  
   
   <script src="popup.js"></script>

@@ -2,6 +2,8 @@
 
 1. **Clona el proyecto**
 >Guardarlo en un sitio que no vayas a borrar sin querer
+
+`git clone https://github.com/IsmaCastro1/JwtExtension.git`
 ---
 
 2. **Pulsa en los tres puntos del navegador y abre el panel de extensiones.**

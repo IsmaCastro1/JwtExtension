@@ -35,6 +35,12 @@
 ---
 
 
+# Uso
+>Abre la extensión en una app y te copiará y almacenará automáticamente el token y con el botón de obtener podrás volver a copiarlo en cualquier pestaña.
+
+>Si el token caduca, repite el proceso anterior.
+
+
 
 
 

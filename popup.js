@@ -7,19 +7,23 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
           tabs[0].id,
           { code: script },
           function(result) {
-
             try {
-              const bearerToken = result[0];     
+              const bearerToken = result[0];   
+
               if (bearerToken) {
                 localStorage.setItem("valueStorage","Bearer " + bearerToken);
                 navigator.clipboard.writeText("Bearer " + bearerToken);
                 textInput.value = bearerToken;
                 showText();
+              }else{
+                if(localStorage.getItem("valueStorage") != undefined && localStorage.getItem("valueStorage") != null ){
+                  navigator.clipboard.writeText(localStorage.getItem("valueStorage"));
+                  showText();
+                }
               }
             } catch (error) {
               
             }
-   
           }
         );
       }
